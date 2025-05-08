@@ -8,41 +8,43 @@ import Cardapio from "../pages/Cardapio";
 import Franquia from "../pages/Franquia";
 import NotFound from "../pages/NotFound";
 import Noticia from "../pages/Noticia";
+import SiteLayout from "../layouts/SiteLayout";
 
 const Paths = () => {
     return (
         <>
             <BrowserRouter>
-                <Header />
                 <Routes>
-                    <Route
-                        path="/"
-                        element={<Inicio />}
-                    />
-                    <Route 
-                        path="/nosso-cafe"
-                        element={<NossoCafe />}
-                    />
-                    <Route 
-                        path="/noticias"
-                        element={<Noticias />}
-                    />
-                    <Route 
-                        path="/noticias/:id"
-                        element={<Noticia />}
-                    />
-                    <Route 
-                        path="/contato"
-                        element={<Contato />}
-                    />
-                    <Route 
-                        path="/cardapio"
-                        element={<Cardapio />}
-                    />
-                    <Route 
-                        path="/franquia"
-                        element={<Franquia />}
-                    />
+                    <Route path="/" element={<SiteLayout />}>
+                        <Route
+                            index
+                            element={<Inicio />}
+                        />
+                        <Route 
+                            path="/nosso-cafe"
+                            element={<NossoCafe />}
+                        />
+                        <Route 
+                            path="/noticias"
+                            element={<Noticias />}
+                        />
+                        <Route 
+                            path="/noticias/:id"
+                            element={<Noticia />}
+                        />
+                        <Route 
+                            path="/contato"
+                            element={<Contato />}
+                        />
+                        <Route 
+                            path="/cardapio"
+                            element={<Cardapio />}
+                        />
+                        <Route 
+                            path="/franquia"
+                            element={<Franquia />}
+                        />
+                    </Route>
                     <Route 
                         path="*"
                         element={<NotFound />}
