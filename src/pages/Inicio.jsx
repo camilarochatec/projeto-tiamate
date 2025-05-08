@@ -4,6 +4,7 @@ const Inicio = () => {
     return (
         <>
             <Sobre />
+            <videoTiamate />
         </>
     );
 }
