@@ -1,9 +1,9 @@
-import Sobre from "../components/Sobre";
+import Instagram from "../components/Instagram";
 
 const Inicio = () => {
     return (
         <>
-            <Sobre />
+            <Instagram />
         </>
     );
 }
