@@ -10,18 +10,18 @@ const Instagram = () => {
     return ( 
         <>
             <section className="">
-                <div className="relative bottom-[-153px] px-[135px] ">
-                    <div className="flex flex-col gap-[30px] lg:flex lg:justify-between lg:align-center ">
+                <div className="relative bottom-[-153px] px-[70px] xl:px-[135px] ">
+                    <div className="flex flex-col gap-[30px] lg:flex lg:flex-row lg:justify-between lg:align-center ">
                         <div className="flex flex-col items-center lg:flex lg:flex-col lg:items-start">
                             <h3 className="text-[15px] lg:text-[18px] text-[#3B2416]">Para você e seus amigos</h3>
                             <h1 className="text-[30px] lg:text-[50px] text-[#A97744] font-bold">Ambiente agradável</h1>
                         </div>
-                        <div className="flex flex-col-reverse items-center lg:flex lg:justify-center lg:gap-[11px] lg:items-center">
+                        <button className="flex flex-col-reverse items-center lg:flex lg:flex-row lg:justify-center lg:gap-[11px] lg:items-center hover:cursor-pointer transform transition-all duration-200 hover:scale-105 ">
                             <h3 className="text-[16px] lg:text-[18px] text-[#3B2416]">Veja mais</h3>
-                            <img src={icon} alt="" className="bg-[#C7794A] h-[61px] w-[62px]" />
-                        </div>
+                            <img src={icon} alt="" className="bg-[#C7794A]  h-[61px] w-[62px]" />
+                        </button>
                     </div>
-                    <div className="grid grid-cols-3 justify-items-center">
+                    <div className="grid grid-cols-3 justify-items-center pt-[30px] lg:pt-[58px]">
                         <img src={foto1} alt="" className="h-full" />
                         <img src={foto2} alt="" className="h-full" />
                         <img src={foto3} alt="" className="h-full" />
@@ -30,7 +30,7 @@ const Instagram = () => {
                         <img src={foto6} alt="" className="h-full" />
                     </div>
                 </div>
-                <div className="w-full h-[153px] bg-[#E7E1DF] -z-10">
+                <div className="w-full sm:h-[153px] bg-[#E7E1DF] -z-10">
                 </div>
             </section>
             
