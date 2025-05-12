@@ -22,7 +22,7 @@ const VideoTiamate = () => {
             videoRef.current.play();
         }
 
-        // Esconder os elementos
+        // Esconde os elementos
         [imgRef.current, playButtonRef.current, linkRef.current].forEach(el => {
             if (el) el.classList.add('hidden');
         });
@@ -30,8 +30,8 @@ const VideoTiamate = () => {
 
     return (
         <section className='flex flex-col items-center'>
-            <div className='flex flex-col gap-[50px] w-[1168px] my-[100px]'>
-                <h1 className='text-[50px] font-bold leading-tight text-[#A97744]'>
+            <div className='flex flex-col w-[90%] lg:w-[1000px] my-[7%]'>
+                <h1 className='text-[30px] md:text-[40px] lg:text-[50px] font-bold leading-tight text-[#A97744] mb-[3%]'>
                     Coisas boas acontecem àqueles<br />que gostam de café
                 </h1>
                 <div className='flex items-center justify-center relative'>
@@ -39,20 +39,20 @@ const VideoTiamate = () => {
                         ref={linkRef}
                         href="#"
                         onClick={handlePlay}
-                        className='z-20 mt-[200px] text-[18px] text-[#F5E7DA] absolute hover:text-[#CF9A5A]'
+                        className='z-20 mt-[110px] text-[12px] md:mt-[150px] lg:mt-[200px] md:text-[14px] lg:text-[18px] text-[#F5E7DA] absolute hover:text-[#CF9A5A] md:block lg:block'
                     >
                         Assistir Vídeo
                     </a>
                     <img
                         ref={playButtonRef}
                         onClick={handlePlay}
-                        className='z-20 absolute transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer'
+                        className='z-20 w-[100px] md:w-[130px] lg:w-[166px] absolute transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer'
                         src={PlayButton}
                         alt="Play"
                     />
                     <img
                         ref={imgRef}
-                        className='z-10 absolute'
+                        className='z-10 lg:w-[1000px] absolute'
                         src={ImgVideo}
                         alt="Imagem de fundo do vídeo"
                     />
