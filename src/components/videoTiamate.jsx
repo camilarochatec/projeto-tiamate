@@ -39,7 +39,7 @@ const VideoTiamate = () => {
                         ref={linkRef}
                         href="#"
                         onClick={handlePlay}
-                        className='z-20 mt-[110px] text-[12px] md:mt-[150px] lg:mt-[200px] md:text-[14px] lg:text-[18px] text-[#F5E7DA] absolute hover:text-[#CF9A5A] md:block lg:block'
+                        className='z-20 mt-[110px] text-[12px] md:mt-[150px] lg:mt-[200px] md:text-[14px] lg:text-[18px] text-[#F5E7DA] absolute hover:text-[#CF9A5A] block'
                     >
                         Assistir Vídeo
                     </a>
