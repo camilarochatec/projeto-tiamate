@@ -1,19 +1,19 @@
 import { useEffect } from "react"
-import coffee from "../assets/icon-coffee.png"
-import email from "../assets/icon-email.png"
-import home from "../assets/icon-home.png"
-import phone from "../assets/icon-phone.png"
-import pin from "../assets/icon-pin.png"
-import user from "../assets/icon-user.png"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import formImage from "../assets/Form-Image.png"
-
+import formUserIcon from "../assets/form-icon-user.png" 
+import formEmailIcon from "../assets/form-icon-email.png"
+import formTelIcon from "../assets/form-icon-telefone.png"
+import formPinIcon from "../assets/form-icon-pin.png"
+import formHouseIcon from "../assets/form-icon-house.png"
+import formCoffeIcon from "../assets/form-icon-Coffe.png"
 const FormFranqueado = () => {
 
     const [estados, setEstados] = useState([]);
     const [cidades, setCidades] = useState([]);
     const { register, handleSubmit, setValue,formState:{errors} } = useForm();
+    const onSubmit = data => console.log(data);
 
 
     async function buscarEstados() {
@@ -55,32 +55,32 @@ const FormFranqueado = () => {
                     mais rápido possível.
                 </h6>
 
-                <form action="#">
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="flex w-full bg-creme rounded-md h-[60px] gap-[10px] items-center pl-[10px] mb-[10px]">
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
-                            <img src="#" alt=""/>
+                            <img src={formUserIcon} alt=""/>
                         </div>
-                        <input type="text" placeholder="Nome e Sobrenome" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
+                        <input  {...register("nome", { required: true })} type="text" placeholder="Nome e Sobrenome" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
                     </div>
 
                     <div className="flex w-full bg-creme rounded-md h-[60px] gap-[10px] items-center pl-[10px] mb-[10px]">
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
-                            <img src="#" alt=""/>
+                            <img src={formEmailIcon} alt=""/>
                         </div>
-                        <input type="email" placeholder="email@exemplo.com" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
+                        <input  {...register("e-mail", { required: true })} type="email" placeholder="email@exemplo.com" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
                     </div>
 
                     <div className="flex w-full bg-creme rounded-md h-[60px] gap-[10px] items-center pl-[10px] mb-[10px]">
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
-                            <img src="#g" alt=""/>
+                            <img src={formTelIcon} alt=""/>
                         </div>
-                        <input type="text" placeholder="Telefone com DDD" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
+                        <input  {...register("telefone", { required: true })} type="text" placeholder="Telefone com DDD" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
                     </div>
 
                     <div className="flex gap-[10px]">
                         <div className="flex w-full bg-creme rounded-md h-[60px] gap-[10px] items-center pl-[10px] mb-[10px]">
                             <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
-                                <img src="#" alt=""/>
+                                <img src={formPinIcon} alt=""/>
                             </div>
                             <select
                                 className="w-full h-full"
@@ -107,7 +107,7 @@ const FormFranqueado = () => {
 
                         <div className="flex w-full bg-creme rounded-md h-[60px] gap-[10px] items-center pl-[10px] mb-[10px]">
                             <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
-                                <img src="#" alt=""/>
+                                <img src={formHouseIcon} alt=""/>
                             </div>
                             <select
                                 className="w-full h-full"
@@ -131,7 +131,7 @@ const FormFranqueado = () => {
 
                     <div className="flex w-full bg-creme rounded-md h-[60px] pl-[10px] mb-[10px]   gap-[10px] items-center ">
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
-                            <img src="#" alt=""/>
+                            <img src={formCoffeIcon} alt="icone de"/>
                         </div>
                         <select
                         className="w-full h-full"
