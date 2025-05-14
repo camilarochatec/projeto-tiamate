@@ -8,12 +8,18 @@ import formTelIcon from "../assets/form-icon-telefone.png"
 import formPinIcon from "../assets/form-icon-pin.png"
 import formHouseIcon from "../assets/form-icon-house.png"
 import formCoffeIcon from "../assets/form-icon-Coffe.png"
+
 const FormFranqueado = () => {
 
     const [estados, setEstados] = useState([]);
     const [cidades, setCidades] = useState([]);
     const { register, handleSubmit, setValue,formState:{errors} } = useForm();
-    const onSubmit = data => console.log(data);
+    
+    const onSubmit = (data) => {
+        console.log(data);
+        alert(`Obrigado ${data.nome} Seu Cadastro foi enviado!`);
+      };
+    
 
 
     async function buscarEstados() {
@@ -39,6 +45,25 @@ const FormFranqueado = () => {
     useEffect(() => {
         buscarEstados();
     }, [])
+
+
+    // Função para aplicar a máscara manualmente
+  const formatTelefone = (value) => {
+    const cleaned = value.replace(/\D/g, ""); // remove não-números
+    const limited = cleaned.slice(0, 11); // limita a 11 dígitos
+
+    const formatted = limited
+      .replace(/^(\d{2})(\d)/, "($1)$2")
+      .replace(/(\d{5})(\d)/, "$1-$2");
+
+    return formatted;
+  };
+
+  const handleTelefoneChange = (e) => {
+    const raw = e.target.value;
+    const masked = formatTelefone(raw);
+    setValue("telefone", masked);
+  };
 
 
     return (
@@ -74,7 +99,7 @@ const FormFranqueado = () => {
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
                             <img src={formTelIcon} alt=""/>
                         </div>
-                        <input  {...register("telefone", { required: true })} type="text" placeholder="Telefone com DDD" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
+                        <input {...register("telefone", { required: true })} onChange={handleTelefoneChange} type="text" placeholder="Telefone com DDD" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none"/>
                     </div>
 
                     <div className="flex gap-[10px]">
