@@ -8,7 +8,6 @@ import formTelIcon from "../assets/form-icon-telefone.png"
 import formPinIcon from "../assets/form-icon-pin.png"
 import formHouseIcon from "../assets/form-icon-house.png"
 import formCoffeIcon from "../assets/form-icon-Coffe.png"
-
 const FormFranqueado = () => {
 
     const [estados, setEstados] = useState([]);
