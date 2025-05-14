@@ -1,9 +1,10 @@
+import FormFranqueado from "../components/FormFranqueado";
 import Sobre from "../components/Sobre";
 
 const Inicio = () => {
     return (
         <>
-            <Sobre />
+            <FormFranqueado />
         </>
     );
 }
