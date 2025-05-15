@@ -7,8 +7,8 @@ const Inicio = () => {
     return (
         <>
             <Sobre />
-            <Instagram />
-            {/* <Depoimentos />
+            {/* <Instagram />
+            <Depoimentos />
             <FormFranqueado /> */}
         </>
     );
