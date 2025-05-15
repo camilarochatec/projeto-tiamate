@@ -8,9 +8,9 @@ const Inicio = () => {
         <>
             <VideoTiamate />
             <Sobre />
-            <Instagram />
+            {/* <Instagram />
             <Depoimentos />
-            <FormFranqueado />
+            <FormFranqueado /> */}
         </>
     );
 }
