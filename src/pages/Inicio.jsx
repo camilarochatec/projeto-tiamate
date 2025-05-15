@@ -6,6 +6,7 @@ import Sobre from "../components/Sobre";
 const Inicio = () => {
     return (
         <>
+            <Sobre />
             <Instagram />
             {/* <Depoimentos />
             <FormFranqueado /> */}
