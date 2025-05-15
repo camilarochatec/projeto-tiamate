@@ -13,8 +13,8 @@ const Instagram = () => {
                 <div className="relative bottom-[-153px] px-[70px] xl:px-[135px] ">
                     <div className="flex flex-col gap-[30px] lg:flex lg:flex-row lg:justify-between lg:align-center ">
                         <div className="flex flex-col items-center lg:flex lg:flex-col lg:items-start">
-                            <h3 className="text-[15px] lg:text-[18px] text-marron-black-02">Para você e seus amigos</h3>
-                            <h1 className="text-[30px] text-[archivo] lg:text-[50px] text-marrom-medium-01 font-bold">Ambiente agradável</h1>
+                            <h3 className="text-[15px] lg:text-[18px] text-[#3B2416]">Para você e seus amigos</h3>
+                            <h1 className="text-[30px] lg:text-[50px] text-[#A97744] font-bold">Ambiente agradável</h1>
                         </div>
                         <>
                             <BotaoVejaMais/>
@@ -29,7 +29,7 @@ const Instagram = () => {
                         <img src={foto6} alt="" className="h-full" />
                     </div>
                 </div>
-                <div className="w-full sm:h-[153px] bg-marrom-white-00 -z-10">
+                <div className="w-full sm:h-[153px] bg-[#E7E1DF] -z-10">
                 </div>
             </section>
             
