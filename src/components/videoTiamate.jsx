@@ -31,7 +31,7 @@ const VideoTiamate = () => {
     return (
         <section className='flex flex-col items-center'>
             <div className='flex flex-col w-[90%] lg:w-[1000px] my-[7%]'>
-                <h1 className='leading-[100%] text-[30px] md:text-[40px] lg:text-[50px] font-bold leading-tight text-[#A97744] mb-[3%]'>
+                <h1 className='leading-[100%] text-[26px] md:text-[40px] lg:text-[50px] font-bold leading-tight text-[#A97744] mb-[3%]'>
                     Coisas boas acontecem àqueles<br />que gostam de café
                 </h1>
                 <div className='flex items-center justify-center relative'>
