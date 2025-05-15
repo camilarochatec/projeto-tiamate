@@ -7,7 +7,7 @@ const SiteLayout = () => {
         <>
             {/* <Header /> */}
             <Outlet />
-            <Footer />
+
         </>
     );
 }
