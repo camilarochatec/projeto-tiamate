@@ -21,12 +21,12 @@ const Instagram = () => {
                         </>
                     </div>
                     <div className="grid grid-cols-3 justify-items-center pt-[30px] lg:pt-[58px]" >
-                        <img src={foto1} alt="" className="h-full" />
-                        <img src={foto2} alt="" className="h-full" />
-                        <img src={foto3} alt="" className="h-full" />
-                        <img src={foto4} alt="" className="h-full" />
-                        <img src={foto5} alt="" className="h-full" />
-                        <img src={foto6} alt="" className="h-full" />
+                        <img src={foto1} alt="" className="w-full " />
+                        <img src={foto2} alt="" className="w-full " />
+                        <img src={foto3} alt="" className="w-full " />
+                        <img src={foto4} alt="" className="w-full " />
+                        <img src={foto5} alt="" className="w-full " />
+                        <img src={foto6} alt="" className="w-full " />
                     </div>
                 </div>
                 <div className="w-full sm:h-[153px] bg-[#E7E1DF] -z-10">
