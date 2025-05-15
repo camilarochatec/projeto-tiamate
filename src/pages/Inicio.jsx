@@ -1,5 +1,4 @@
-import Depoimentos from "../components/Depoimentos";
-import Sobre from "../components/Sobre";
+import Depoimentos from "../components/Depoimentos/Depoimentos";
 
 const Inicio = () => {
     return (
