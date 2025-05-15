@@ -6,7 +6,7 @@ const Inicio = () => {
     return (
         <>
             <Sobre />
-            <Video />
+            <VideoTiamate />
             <FormFranqueado />
         </>
     );
