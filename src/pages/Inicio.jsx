@@ -7,6 +7,7 @@ const Inicio = () => {
     return (
         <>
             <VideoTiamate />
+            <Sobre />
             <Instagram />
             <Depoimentos />
             <FormFranqueado />
