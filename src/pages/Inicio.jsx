@@ -7,8 +7,8 @@ import NossasCafeterias from "../components/NossasCafeterias";
 const Inicio = () => {
     return (
         <>
-            {/* <Instagram />
-            <Depoimentos />
+            <Instagram />
+            {/* <Depoimentos />
             <FormFranqueado /> */}
             <NossasCafeterias />
         </>
