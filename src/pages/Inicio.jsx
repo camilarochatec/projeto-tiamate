@@ -5,10 +5,15 @@ import Sobre from "../components/Sobre";
 import QuemSomos from "../components/QuemSomos/index.jsx";
 import Cardapio from "../components/Cardapio";
 import VideoTiamate from "../components/videoTiamate";
+import NossasCafeterias from "../components/NossasCafeterias";
 
 const Inicio = () => {
     return (
         <>
+            <Instagram />
+            {/* <Depoimentos />
+            <FormFranqueado /> */}
+            <NossasCafeterias />
             <QuemSomos />
             <Cardapio />
             {/* <Sobre /> */}
