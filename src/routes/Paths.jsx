@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Inicio from "../pages/Inicio";
 import NossoCafe from "../pages/NossoCafe";
-import Header from "../components/Header";
 import Noticias from "../pages/Noticias";
 import Contato from "../pages/Contato";
 import Cardapio from "../pages/Cardapio";
