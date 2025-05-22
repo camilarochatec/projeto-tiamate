@@ -91,9 +91,9 @@
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <button className="bg-[#cf9a5a] border-0 px-[80px] py-[8px] sm:px-[152px] sm:py-[16px] text-[18px] rounded hover:brightness-110 transition-all duration-300">
+          <a href="/cardapio" className="bg-[#cf9a5a] border-0 px-[80px] py-[8px] sm:px-[152px] sm:py-[16px] text-[18px] rounded hover:brightness-110 transition-all duration-300">
             Ver mais
-          </button>
+          </a>
         </motion.div>
       </section>
     );
