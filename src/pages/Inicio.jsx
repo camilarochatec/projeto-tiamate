@@ -7,12 +7,7 @@ import Valores from "../components/Valores";
 const Inicio = () => {
     return (
         <>
-            <Sobre />
-            <Valores/>
-            <Instagram />
-            <Depoimentos />
-            <FormFranqueado /> 
-            
+            <Valores/>        
         </>
     );
 }
