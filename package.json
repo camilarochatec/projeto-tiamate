@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "api": "npx json-server ./src/api/api.json --watch --port 4000"
+    "api": "npx json-server ./src/api/api.json --watch --port 4000",
+    "start": "concurrently \"npm run dev\" \"npm run api\""
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
@@ -17,6 +18,8 @@
     "antd": "^5.25.0",
     "axios": "^1.9.0",
     "boxicons": "^2.1.4",
+    "concurrently": "^9.1.2",
+    "framer-motion": "^12.12.1",
     "json-server": "^0.17.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
