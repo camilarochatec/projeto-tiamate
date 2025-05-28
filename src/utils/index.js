@@ -31,6 +31,8 @@ import bebidasGeladas03 from '../assets/Produtos/bebidasGeladas03.png'
 import bebidasGeladas04 from '../assets/Produtos/bebidasGeladas04.png'
 import bebidasGeladas05 from '../assets/Produtos/bebidasGeladas05.png'
 import bebidasGeladas06 from '../assets/Produtos/bebidasGeladas06.png'
+import bebidasGeladas07 from '../assets/Produtos/bebidasGeladas07.png'
+import bebidasGeladas08 from '../assets/Produtos/bebidasGeladas08.png'
 
 
 
@@ -97,6 +99,8 @@ export const bebidasGeladas = [
    {nome:"Suco de Uva", imgUrl:bebidasGeladas04},
    {nome:"Água sem gás", imgUrl:bebidasGeladas05},
    {nome:"Água com gás", imgUrl:bebidasGeladas06},
+   {nome:"Suco de Laranja", imgUrl:bebidasGeladas07},
+   {nome:"Suco de Uva", imgUrl:bebidasGeladas08},
 ]
 
   
