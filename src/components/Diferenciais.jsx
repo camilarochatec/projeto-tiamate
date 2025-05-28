@@ -48,14 +48,14 @@ export default function Diferenciais() {
     <section
       id="diferenciais"
       className="w-full flex flex-col items-center justify-center py-10 px-4 gap-8
-      xl:flex-row xl:items-start xl:justify-between xl:px-16"
+      xl:flex-row xl:items-start  xl:px-16"
     >
       {/* Título e ícones */}
       <div
         id="titlesAndIcons"
         className="w-full flex flex-col items-center gap-4
         lg:items-center lg:justify-start xl:items-start
-        xl:w-1/3"
+        xl:w-1/4"
       >
         <h3
           className="text-[36px] font-bold text-[#a97744] text-center
@@ -135,7 +135,7 @@ export default function Diferenciais() {
 
       {/* Imagem e descrição */}
       <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-6 xl:w-2/3
-      xl:items-start xl:gap-12">
+      xl:items-start xl:gap-16">
         {/* Imagem com animação */}
         <div className="flex justify-center items-center lg:w-1/2">
           <AnimatePresence mode="wait">
