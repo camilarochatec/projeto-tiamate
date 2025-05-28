@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import images from "../services/exportImages.js";
 
 export default function Diferenciais() {
@@ -46,79 +47,131 @@ export default function Diferenciais() {
   return (
     <section
       id="diferenciais"
-      className="w-full flex flex-col items-center justify-center py-10 px-4 gap-8"
+      className="w-full flex flex-col items-center justify-center py-10 px-4 gap-8
+      xl:flex-row xl:items-center xl:justify-between xl:px-16"
     >
       {/* Título e ícones */}
       <div
         id="titlesAndIcons"
-        className="w-full flex flex-col items-center gap-4 lg:justify-between"
+        className="w-full flex flex-col items-center gap-4
+        lg:items-start lg:justify-start
+        xl:w-1/3"
       >
-        <h3 className="text-[36px] font-bold text-[#a97744] text-center lg:text-left">
+        <h3
+          className="text-[36px] font-bold text-[#a97744] text-center
+          lg:text-left xl:text-[50px]"
+        >
           Diferenciais da Tiamate
         </h3>
 
-        <div className="flex gap-4 flex-wrap items-center justify-center lg:justify-end">
-          <img
-            src={images.iconeLucro}
-            alt="iconeLucro"
+        <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+          <button
             onClick={() => setImagemAtiva(infoImages[0])}
-            className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
-          />
-          <img
-            src={images.iconeEntrega}
-            alt="iconeEntrega"
+            className="inline-flex p-0 border-none bg-transparent focus:outline-none focus:ring-0"
+          >
+            <img
+              src={images.iconeLucro}
+              alt="Ícone de lucro"
+              className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
+            />
+          </button>
+
+          <button
             onClick={() => setImagemAtiva(infoImages[1])}
-            className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
-          />
-          <img
-            src={images.iconeQualidade}
-            alt="iconeQualidade"
+            className="inline-flex p-0 border-none bg-transparent focus:outline-none focus:ring-0"
+          >
+            <img
+              src={images.iconeEntrega}
+              alt="Ícone de entrega"
+              className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
+            />
+          </button>
+
+          <button
             onClick={() => setImagemAtiva(infoImages[5])}
-            className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
-          />
-          <img
-            src={images.iconeFranquia}
-            alt="iconeFranquia"
+            className="inline-flex p-0 border-none bg-transparent focus:outline-none focus:ring-0"
+          >
+            <img
+              src={images.iconeQualidade}
+              alt="Ícone de qualidade"
+              className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
+            />
+          </button>
+
+          <button
             onClick={() => setImagemAtiva(infoImages[3])}
-            className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
-          />
-          <img
-            src={images.iconeMidia}
-            alt="iconeMidia"
+            className="inline-flex p-0 border-none bg-transparent focus:outline-none focus:ring-0"
+          >
+            <img
+              src={images.iconeFranquia}
+              alt="Ícone de franquia"
+              className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
+            />
+          </button>
+
+          <button
             onClick={() => setImagemAtiva(infoImages[2])}
-            className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
-          />
-          <img
-            src={images.iconeAmor}
-            alt="iconeAmor"
+            className="inline-flex p-0 border-none bg-transparent focus:outline-none focus:ring-0"
+          >
+            <img
+              src={images.iconeMidia}
+              alt="Ícone de mídia"
+              className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
+            />
+          </button>
+
+          <button
             onClick={() => setImagemAtiva(infoImages[4])}
-            className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
-          />
+            className="inline-flex p-0 border-none bg-transparent focus:outline-none focus:ring-0"
+          >
+            <img
+              src={images.iconeAmor}
+              alt="Ícone de equipe"
+              className="duration-300 ease-in-out hover:scale-110 cursor-pointer"
+            />
+          </button>
         </div>
       </div>
 
-      {/* Imagem central e descrição */}
-      <div className="flex flex-col-reverse items-center justify-center gap-2 lg:flex-row-reverse lg:items-center lg:justify-between min-h-[320px] w-full">
-        {/* Texto */}
-        <div className="flex flex-col gap-4 items-center justify-center text-center lg:items-start lg:text-left lg:w-1/2 min-h-[200px] transition-all duration-300 ease-in-out">
-          <h3 className="text-[30px] font-bold text-[#a97744] transition-all duration-300">
-            {imagemAtiva.title}
-          </h3>
-          <p className="text-[18px] max-w-[400px] transition-all duration-300">
-            {imagemAtiva.text}
-          </p>
+      {/* Imagem e descrição */}
+      <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-6 xl:w-2/3">
+        {/* Imagem com animação */}
+        <div className="flex justify-center items-center lg:w-1/2">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={imagemAtiva.img}
+              src={imagemAtiva.img}
+              alt={imagemAtiva.title}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="w-[280px] md:w-[300px] xl:w-[360px] object-contain"
+            />
+          </AnimatePresence>
         </div>
 
-        {/* Imagem */}
-        <div className="lg:w-1/2 flex justify-center">
-          <img
-            src={imagemAtiva.img}
-            alt={imagemAtiva.title}
-            className="w-[300px] h-auto object-contain transition-all duration-300 ease-in-out"
-          />
+        {/* Texto com animação */}
+        <div className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left lg:w-1/2 ">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={imagemAtiva.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex flex-col gap-4 items-center lg:items-start"
+            >
+              <h3 className="text-[30px] font-bold text-[#a97744] xl:text-[50px]">
+                {imagemAtiva.title}
+              </h3>
+              <p className="text-[18px] max-w-[400px] leading-relaxed">
+                {imagemAtiva.text}
+              </p>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
   );
 }
-
