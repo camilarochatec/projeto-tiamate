@@ -24,7 +24,7 @@ const Modelo = () => {
         <p className="text-sm text-[#5a4230] mb-2">
           A Tiamate oferece 2 modelos <br /> de franquia personalizados.
         </p>
-        <h2 className="text-[20px] lg:text-4xl font-bold text-[#a46d3a] font-archivo leading-tight">
+        <h2 className="text-[36px] lg:text-4xl font-bold text-[#a46d3a] font-archivo leading-tight">
           Escolha a Tiamate <br /> ideal para você
         </h2>
       </div>
