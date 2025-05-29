@@ -1,16 +1,10 @@
-import { QueryClientProvider } from "@tanstack/react-query";
-import Paths from "./routes/Paths";
-import { queryClient } from "./services";
-import 'boxicons'
+import Modelo from './components/Modelo';
 
-
-const App = () => {
+function App() {
   return (
-    <>
-      <QueryClientProvider client={queryClient}>
-        <Paths />
-      </QueryClientProvider>
-    </>
+    <div>
+      <Modelo />
+    </div>
   );
 }
 
