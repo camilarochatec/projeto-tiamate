@@ -1,9 +1,9 @@
-import Modelo from './components/Modelo';
+import Banner from './components/Banner';
 
 function App() {
   return (
     <div>
-      <Modelo />
+      <Banner />
     </div>
   );
 }
