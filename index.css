@@ -17,3 +17,25 @@
 * {
     font-family: "Archivo", sans-serif;
 }
+
+
+@layer utilities {
+    @keyframes slide-in {
+      0% {
+        opacity: 0.5;
+        transform: translateX(-80px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(-40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    .animate-slide-in {
+      animation: slide-in 1s ease-out forwards;
+    }
+  }
