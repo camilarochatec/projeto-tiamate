@@ -7,25 +7,15 @@ import QuemSomos from "../components/QuemSomos/index.jsx";
 import Cardapio from "../components/Cardapio";
 import VideoTiamate from "../components/videoTiamate";
 import NossasCafeterias from "../components/NossasCafeterias";
+import FormContato from "../components/FormContato.jsx";
 import Noticias from "../components/Noticias.jsx";
 
 const Inicio = () => {
     return (
         <>
-            {/* <Instagram />
-            <Depoimentos /> */}
-            <Noticias />
-            {/* <FormFranqueado /> */}
-            {/* <NossasCafeterias /> */}
-            {/* <QuemSomos />
-            <Cardapio /> */}
-            {/* <Sobre /> */}
-            {/* <VideoTiamate />
-            <Sobre /> */}
-            {/* <Instagram />
-            <Depoimentos />
-            <FormFranqueado /> */}
-            <Valores/>
+
+            <FormContato />
+
         </>
     );
 }
