@@ -35,7 +35,7 @@ const Produtos = () => {
             translate-x-[-80px] animate-slide-in`}
 >
               {bebidasAtuais.map((item, index) => (
-                <div className="flex flex-col items-center-safe bg-blue-600 justify-center overflow-hidden pb-2 " key={index}>
+                <div className="flex flex-col items-center-safe justify-center overflow-hidden pb-2 " key={index}>
                   <img src={item.imgUrl} alt={item.nome} />
                   <p className="text-center text-wrap">{item.nome}</p>
                 </div>

@@ -15,19 +15,19 @@ const Noticias = () => {
                         <img src={foto1} alt="" className="hover:cursor-pointer transform transition-all duration-200 hover:scale-105" />
                         <h2 className="text-[24px]  font-bold text-vinho leading-6 hover:cursor-pointer transform transition-all duration-200 hover:scale-105">Cafeteria é nova tendência
                         <br /> de negócio em Salvador</h2>
-                        <button className="w-[370px] h-[50px] rounded-[5px] border-2 border-caramelo text-[16px] text-caramelo hover:cursor-pointer transform transition-all duration-200 hover:scale-105 hover:text-marrom hover:bg-caramelo">Notícia Completa</button>
+                        <button className="w-full h-[50px] rounded-[5px] border-2 border-caramelo text-[16px] text-caramelo hover:cursor-pointer transform transition-all duration-200 hover:scale-105 hover:text-marrom hover:bg-caramelo">Notícia Completa</button>
                     </div>
                     <div className="flex flex-col items-center lg:items-start gap-[20px]">
                         <img src={foto2} alt="" className="hover:cursor-pointer transform transition-all duration-200 hover:scale-105" />
                         <h2 className="text-[24px]  font-bold text-vinho leading-6 hover:cursor-pointer transform transition-all duration-200 hover:scale-105">Um gostinho moderno
                         <br /> no coração de Fortaleza</h2>
-                        <button className="w-[370px] h-[50px] rounded-[5px] border-2 border-caramelo text-[16px] text-caramelo hover:cursor-pointer transform transition-all duration-200 hover:scale-105 hover:text-marrom hover:bg-caramelo">Notícia Completa</button>
+                        <button className="w-full h-[50px] rounded-[5px] border-2 border-caramelo text-[16px] text-caramelo hover:cursor-pointer transform transition-all duration-200 hover:scale-105 hover:text-marrom hover:bg-caramelo">Notícia Completa</button>
                     </div>
                     <div className="flex flex-col items-center lg:items-start gap-[20px]">
                         <img src={foto2} alt="" className="hover:cursor-pointer transform transition-all duration-200 hover:scale-105"/>
                         <h2 className="text-[24px] font-bold text-vinho leading-6 hover:cursor-pointer transform transition-all duration-200 hover:scale-105" >Cafeteria é nova tendência
                         <br /> de negócio em Salvador</h2>
-                        <button className="w-[370px] h-[50px] rounded-[5px] border-2 border-caramelo text-[16px] text-caramelo hover:cursor-pointer transform transition-all duration-200 hover:scale-105 hover:text-marrom hover:bg-caramelo">Notícia Completa</button>
+                        <button className="w-full h-[50px] rounded-[5px] border-2 border-caramelo text-[16px] text-caramelo hover:cursor-pointer transform transition-all duration-200 hover:scale-105 hover:text-marrom hover:bg-caramelo">Notícia Completa</button>
                     </div>
                 </div>
             </section>

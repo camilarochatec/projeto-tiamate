@@ -44,24 +44,24 @@ const FormContato = () => {
 
                 </div>
 
-                <div className="flex flex-col items-center gap-[30px] lg:items-start lg:flex-row lg:gap-[50px] xl:items-start xl:flex-row xl:gap-[100px]">
+                <div className="flex flex-col items-center gap-[30px] p-4 lg:p-0 lg:items-start lg:flex-row lg:gap-[50px] xl:items-start xl:flex-row xl:gap-[100px]">
 
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-[10px] md:gap-[15px] lg:gap-[10px] xl:gap-[10px]">
-                        <div className="flex gap-[10px] items-center w-[370px] h-[60px] rounded-[5px] bg-[#E7E1DF] md:w-[530px] lg:w-[500px] xl:w-[570px] border-2 border-transparent focus-within:border-[#A97744] transition-colors duration-400">
+                    <form onSubmit={handleSubmit} className="w-full flex flex-col items-center lg:items-start gap-[10px] md:gap-[15px] lg:gap-[10px] xl:gap-[10px]">
+                        <div className="flex gap-[10px] items-center w-full h-[60px] rounded-[5px] bg-[#E7E1DF] md:w-[530px] lg:w-[500px] xl:w-[570px] border-2 border-transparent focus-within:border-[#A97744] transition-colors duration-400">
                             <div className="flex justify-center items-center h-[33px] w-[33px] rounded-full ml-[10px] bg-[#969696]">
                                 <img src={user} alt="user" />
                             </div>
                             <input className="outline-none flex-1 h-[60px]" type="text" placeholder="Nome e Sobrenome" value={nome} onChange={(e) => setNome(e.target.value)} required />
                         </div>
-                        <div className="flex gap-[10px] items-center w-[370px] h-[60px] rounded-[5px] bg-[#E7E1DF] md:w-[530px] lg:w-[500px] xl:w-[570px] border-2 border-transparent focus-within:border-[#A97744] transition-colors duration-400">
+                        <div className="flex gap-[10px] items-center w-full h-[60px] rounded-[5px] bg-[#E7E1DF] md:w-[530px] lg:w-[500px] xl:w-[570px] border-2 border-transparent focus-within:border-[#A97744] transition-colors duration-400">
                             <div className="flex justify-center items-center h-[33px] w-[33px] rounded-full ml-[10px] bg-[#969696]">
                                 <img src={email} alt="email" />
                             </div>
                             <input className="outline-none flex-1 h-[60px]" type="text" placeholder="email@exemplo.com" value={emailInput} onChange={(e) => setEmailInput(e.target.value)} required />
                         </div>
 
-                        <textarea className="block bg-cinza w-[370px] h-[220px] rounded-[5px] resize-none px-[20px] pt-[20px] outline-none md:w-[530px] lg:w-[500px] lg:h-[241px] xl:w-[570px] xl:h-[241px] border-2 border-transparent focus-within:border-[#A97744] transition-colors duration-400" name="mensagem" id="msg" placeholder="Mensagem" value={mensagem} onChange={(e) => setMensagem(e.target.value)}></textarea>
-                        <button type="submit" className="w-[370px] h-[60px] rounded-[5px] text-[#3B2416] font-semibold bg-[#CF9A5A] md:w-[530px] lg:w-[500px] lg:text-[16px] xl:w-[570px] xl:text-[16px] hover:bg-[#A97744] hover:text-white duration-300">Enviar</button>
+                        <textarea className="block bg-cinza w-full h-[220px] rounded-[5px] resize-none px-[20px] pt-[20px] outline-none md:w-[530px] lg:w-[500px] lg:h-[241px] xl:w-[570px] xl:h-[241px] border-2 border-transparent focus-within:border-[#A97744] transition-colors duration-400" name="mensagem" id="msg" placeholder="Mensagem" value={mensagem} onChange={(e) => setMensagem(e.target.value)}></textarea>
+                        <button type="submit" className="w-full h-[60px] rounded-[5px] text-[#3B2416] font-semibold bg-[#CF9A5A] md:w-[530px] lg:w-[500px] lg:text-[16px] xl:w-[570px] xl:text-[16px] hover:bg-[#A97744] hover:text-white duration-300">Enviar</button>
 
                     </form>
 

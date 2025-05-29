@@ -24,14 +24,20 @@ const Modelo = () => {
         <p className="text-sm text-[#5a4230] mb-2">
           A Tiamate oferece 2 modelos <br /> de franquia personalizados.
         </p>
-        <h2 className="text-4xl font-bold text-[#a46d3a] font-archivo leading-tight">
+        <h2 className="text-[20px] lg:text-4xl font-bold text-[#a46d3a] font-archivo leading-tight">
           Escolha a Tiamate <br /> ideal para você
         </h2>
       </div>
 
-      <div className="flex flex-row items-center gap-4">
-        <img src={tiamate1} alt="Tiamate Coffee" className="max-w-[140px] rounded" />
-        <img src={tiamate2} alt="Tiamate Coffee To Go" className="max-w-[140px] rounded" />
+      <div className="flex items-center gap-4 mt-8">
+        <div>
+          <img src={tiamate1} alt="Tiamate Coffee" className="flex-1 block lg:max-w-[140px] rounded" />
+
+        </div>
+        <div>
+          <img src={tiamate2} alt="Tiamate Coffee To Go" className="flex-1 block lg:max-w-[140px] rounded" />
+
+        </div>
       </div>
     </div>
   ) : (
