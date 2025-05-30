@@ -62,11 +62,11 @@ const FormFranqueado = () => {
 
 
     return (
-        <section id="franquia" className="bg-marrom flex flex-col md:flex-col-reverse lg:flex-row">
+        <section id="franquia" className="bg-marrom flex flex-col-reverse lg:flex-row">
             <div className="flex-1 p-4 md:p-[40px] xl:pl-[135px] xl:pr-[70px] xl:py-[70px] flex justify-center flex-col md:mb-4 md:px-[60px] md:ml-2 xl:px-[135px]">
                 <h6 className="text-caramelo mb-[6px] text-[18px] md:justify-center">Entre em contato</h6>
 
-                <h2 className="text-creme font-bold w-[440px] leading-[54px] text-[36px] xl:text-[50px] mb-[19px]">
+                <h2 className="text-creme font-bold leading-[54px] text-[36px] xl:text-[50px] mb-[19px]">
                     Abra sua Franquia
                 </h2>
 
@@ -175,7 +175,7 @@ const FormFranqueado = () => {
 
             </div>
 
-            <div className="lg:flex-1">
+            <div className="flex-1 ">
                 <img src={formImage} alt="Imagem ilustrativa" className="hidden md:block w-full h-full object-cover" />
             </div>
         </section>
