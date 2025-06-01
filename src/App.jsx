@@ -1,11 +1,12 @@
 import Banner from './components/Banner';
-import Inicio from './pages/Inicio'
+import Produtos from './components/Produtos';
+import Inicio from './pages/Inicio';
 import Paths from './routes/Paths';
 
 function App() {
   return (
  
-      <Paths />
+      <Produtos />
    
   );
 }
