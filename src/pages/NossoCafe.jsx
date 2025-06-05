@@ -3,10 +3,22 @@ import sessaoImg1 from "../assets/cafe27.png"
 import sessaoImg2 from "../assets/cafe28.png"
 import sessaoImg3 from "../assets/cafe29.png"
 import sessaoImg4 from "../assets/cafe30.png"
+import FormFranqueado from "../components/FormFranqueado";
+import Depoimentos from "../components/Depoimentos/Depoimentos";
+import Banner from "../components/Banner";
+import Banner02 from "../assets/Banner02.png"
 
 const NossoCafe = () => {
   return (
     <>
+    <Banner
+                imagem={Banner02}
+                texto={["Mais que sabor,", "sentimentos!"]}
+                redesSociais
+                // fraseColorida // Se a primeira frase deve ser colorida ou não
+                // corDaFrase={{ color: "text-mostarda" }} // Aqui conseguimos escolher a cor que vai estar na primeira frase
+            // textoAdireita
+            />
       <Sessao
         titulo={"Colheita"}
         texto={[
@@ -41,6 +53,8 @@ const NossoCafe = () => {
         imagem={sessaoImg4}
         layoutReverso
       />
+      <FormFranqueado />
+      <Depoimentos />
     </>
   );
 }
