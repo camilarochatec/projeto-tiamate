@@ -8,18 +8,13 @@ import Cardapio from "../components/Cardapio";
 import VideoTiamate from "../components/videoTiamate";
 import NossasCafeterias from "../components/NossasCafeterias";
 import Produtos from "../components/Produtos";
+import Cta from "../components/Cta.jsx";
 
 
 const Inicio = () => {
     return (
         <>
-            <Produtos />
-
-            {/* <Banner />
-            <Instagram />
-            <Depoimentos />
-            <FormFranqueado />
-            <Valores /> */}
+        <Cta
         </>
     );
 }

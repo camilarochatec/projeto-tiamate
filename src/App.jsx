@@ -1,9 +1,10 @@
+import Cta from './components/Cta';
 import Modelo from './components/Modelo';
 
 function App() {
   return (
     <div>
-      <Modelo />
+      <Cta />
     </div>
   );
 }
