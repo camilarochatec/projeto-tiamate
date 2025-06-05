@@ -1,9 +1,10 @@
-import Modelo from './components/Modelo';
+
+import Paths from './routes/Paths';
 
 function App() {
   return (
     <div>
-      <Modelo />
+      <Paths />
     </div>
   );
 }
