@@ -48,5 +48,30 @@
             "cardapio_imagem": "/src/assets/Tiamatino-imagens/Tiamatino coffee tradicional.png",
             "cardapio_descricao": "O sabor autêntico do café bem feito. Encorpado, aromático e perfeito para qualquer hora do dia. Para quem valoriza o bom e velho café de qualidade."
         }
+    ],
+
+    "enderecos":[
+        {
+            "id": "1",
+            "endereco_unidade": "Salvador - BA",
+            "endereco_logradouro": "Shopping Iguatemi Salvador",
+            "endereco_telefone": "(00) 98765-2345",
+            "endereco_cep": "70770-560"
+        },
+         {
+            "id": "2",
+            "endereco_unidade": "Fortaleza - CE",
+            "endereco_logradouro": "Shopping Iguatemi Fortaleza",
+            "endereco_telefone": "(00) 98765-2345",
+            "endereco_cep": "70770-560"
+        },
+         {
+            "id": "3",
+            "endereco_unidade": "Recife - PE",
+            "endereco_logradouro": "Shopping Recife",
+            "endereco_telefone": "(00) 98765-2345",
+            "endereco_cep": "70770-560"
+        }
+
     ]
 }
