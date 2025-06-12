@@ -1,4 +1,5 @@
 
+import { useBuscarDepoimentos } from "../../hooks/depoimentosHooks";
 import cliente1 from "./assets/cliente1.png";
 import cliente2 from "./assets/cliente2.png";
 import cliente3 from "./assets/cliente3.png";
@@ -6,6 +7,8 @@ import depoimento_bg from "./assets/depoimento_bg.png";
 import estrela from "./assets/estrela.png";
 
 const Depoimentos = () => {
+  const { data: listaDepoimentos } = useBuscarDepoimentos();
+
   return (
     <section className="flex flex-col items-center gap-2 py-16 relative overflow-hidden xl:py-[130px]">
       <div className="flex flex-col items-center">
