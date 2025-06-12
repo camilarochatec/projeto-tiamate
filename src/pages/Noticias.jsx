@@ -7,8 +7,8 @@ import Modelo from "../components/Modelo";
 import ModelosFranquia from "../components/ModelosFranquia";
 import Diferenciais from "../components/Diferenciais";
 import Cta from "../components/Cta";
-import cta1 from "../assets/cta-1.png"
-import cta2 from "../assets/cta-2.png"
+import cta1 from "../assets/Cta-1.png"
+import cta2 from "../assets/Cta-2.png"
 import Depoimentos from "../components/Depoimentos/Depoimentos";
 import Posts from "../components/Noticias";
 
