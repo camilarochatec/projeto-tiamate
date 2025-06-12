@@ -23,7 +23,7 @@ const Depoimentos = () => {
         />
 
         <div
-          className="overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-10 px-8 no-scrollbar mt-6 md:ml-80"
+          className="overflow-x-auto lg:overflow-hidden scroll-smooth snap-x snap-mandatory flex gap-10 px-8 no-scrollbar mt-6 md:ml-80"
         >
 
           <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
@@ -47,7 +47,6 @@ const Depoimentos = () => {
             </div>
           </div>
 
-
           <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
             <div className="flex gap-1">
               <img src={estrela} alt="estrela" />
@@ -66,7 +65,6 @@ const Depoimentos = () => {
               <p className="text-vinho font-semibold">Kalil Sousa</p>
             </div>
           </div>
-
 
           <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
             <div className="flex gap-1">
