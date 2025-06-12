@@ -8,17 +8,13 @@ import bannerImgContato from "../assets/banner-contato.png";
 const Contato = () => {
     return (
         <>
-            <Header />
             <Banner
                 imagem={bannerImgContato}
-                texto={["Depois do café","eu me expresso."]}
+                texto={["Depois do café", "eu me expresso."]}
                 redesSociais
-                
             />
             <NossasCafeterias />
-            <Enderecos
-            
-            />
+            <Enderecos />
             <FormContato />
         </>
     );
