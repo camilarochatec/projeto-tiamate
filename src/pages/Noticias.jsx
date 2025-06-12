@@ -13,10 +13,8 @@ const Noticias = () => {
         <>
             <Banner
                 imagem={bannerImg}
-                texto={["Um café quentinho", "aqui na Tiamate", "muda o dia."]}
+                texto={["Abra sua Franquia", "Tiamate Coffee"]}
                 redesSociais
-                fraseColorida // Se a primeira frase deve ser colorida ou não
-                corDaFrase={{ color: "text-mostarda" }} // Aqui conseguimos escolher a cor que vai estar na primeira frase
             // textoAdireita
             />
             <QuemSomos/>

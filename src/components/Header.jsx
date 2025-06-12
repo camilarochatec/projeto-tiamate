@@ -19,7 +19,6 @@ const Header = () => {
           {/* Seção esquerda com logo e navegação */}
           <div className="flex items-center flex-1">
             <img src={logo || "/placeholder.svg"} alt="Logo" className="h-12 w-auto" />
-
             {/* Menu para desktop - visível apenas em telas médias e grandes */}
             <nav className="hidden md:flex items-center ml-6 space-x-6">
               <NavLink to={"/"}>Inicio</NavLink>
@@ -29,7 +28,6 @@ const Header = () => {
               <NavLink to={"/cardapio"}>Cardápio</NavLink>
             </nav>
           </div>
-
           {/* Seção direita com botão de franquia */}
           <div className="flex items-center justify-end">
             {/* Botão hamburger visível apenas em telas pequenas */}

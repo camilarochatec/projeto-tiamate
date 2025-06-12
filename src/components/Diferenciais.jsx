@@ -48,7 +48,7 @@ export default function Diferenciais() {
     <section
       id="diferenciais"
       className="w-full flex flex-col items-center justify-center py-10 px-4 gap-8
-      xl:flex-row xl:items-start  xl:px-16"
+      xl:flex-row xl:items-start  xl:py-[200px] xl:px-[135px]"
     >
       {/* Título e ícones */}
       <div

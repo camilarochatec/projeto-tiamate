@@ -31,7 +31,7 @@ const ModelosFranquia = ({
   retorno,
   lucro,
   investimento,
- }) => {
+}) => {
   const [imagemSelecionada, setImagemSelecionada] = useState(0)
 
   const imagensG = titulo === "Tiamate Coffee"
@@ -42,9 +42,9 @@ const ModelosFranquia = ({
     ? [imgTiamateP1, imgTiamateP2, imgTiamateP3, imgTiamateP4, imgTiamateP5]
     : [imgToGoP1, imgToGoP2, imgToGoP3, imgToGoP4, imgToGoP5]
 
-  return ( 
+  return (
     <>
-      <div className="flex flex-col lg:flex-row justify-between w-full gap-[30px] xl:gap-0">
+      <div className="flex flex-col lg:flex-row justify-between w-full gap-[30px] xl:gap-0 p-4 lg:p-[60px]">
         <div className="flex flex-col gap-[20px] xl:gap-[30px]">
           <div className="flex flex-col items-center lg:items-start">
             <p className="font-[400] text-md xl:text-lg text-marrom leading-[100%]">
@@ -141,7 +141,7 @@ const ModelosFranquia = ({
         </div>
       </div>
     </>
-   );
+  );
 }
- 
+
 export default ModelosFranquia;
