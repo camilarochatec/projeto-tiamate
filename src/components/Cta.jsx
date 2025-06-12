@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import cta1 from "../assets/cta-1.png"
 
-const Cta = ({ titulo, descricao, textoDoBotao }) => {
+const Cta = ({ titulo, descricao, textoDoBotao, imagem }) => {
   return (
 
     <section
       className="w-full py-40 px-10 flex flex-col items-center justify-center gap-8 bg-cover bg-center"
-      style={{ backgroundImage: `url(${cta1})` }}
+      style={{ backgroundImage: `url(${imagem})` }}
     >
       <div className="flex flex-col items-center justify-center gap-1">
         <h2 className="text-white font-bold text-2xl text-center lg:text-2xl xl:text-4xl">{titulo}</h2>
