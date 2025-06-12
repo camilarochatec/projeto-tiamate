@@ -6,7 +6,7 @@ const Valores = () => {
     return (
         <>
 
-            <section id="valores" className="lg:flex mb-[80px] p-4 md:p-[60px] xl:px-[135px] xl:pt-[160px] xl:pb-[140px] lg:gap-[60px] xl:gap-[160px] text-center lg:text-left">
+            <section id="valores" className="lg:flex mb-[80px] p-4 md:p-[60px] xl:px-[135px] xl:pt-[160px]  xl:pb-[140px] lg:gap-[60px] xl:gap-[160px] text-center lg:text-left">
                 <div>
                     <div className="lg:flex lg:items-center lg:gap-4">
                         <img src={missao} alt="missao" className="px-1 m-auto lg:m-0" />
