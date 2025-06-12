@@ -1,10 +1,11 @@
-import Cta from './components/Cta';
-import Modelo from './components/Modelo';
+import Banner from './components/Banner';
+import Produtos from './components/Produtos';
+import Inicio from './pages/Inicio';
 import Paths from './routes/Paths';
 
 function App() {
   return (
-    <Paths />
+      <Paths />
   );
 }
 

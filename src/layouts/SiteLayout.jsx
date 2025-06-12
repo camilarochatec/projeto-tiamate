@@ -6,7 +6,8 @@ const SiteLayout = () => {
     return (
         <>
             <Header />
-            <Outlet />
+                <Outlet />
+            <Footer />
 
         </>
     );

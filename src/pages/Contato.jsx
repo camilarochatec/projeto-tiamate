@@ -1,7 +1,9 @@
+import Enderecos from "../components/Enderecos";
+
 const Contato = () => {
     return (
         <>
-            <h1>Pagina contato</h1>
+            <Enderecos/>
         </>
     );
 }
