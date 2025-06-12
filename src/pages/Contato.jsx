@@ -1,4 +1,3 @@
-import { Header } from "antd/es/layout/layout";
 import Enderecos from "../components/Enderecos";
 import Banner from "../components/Banner";
 import NossasCafeterias from "../components/NossasCafeterias";
