@@ -7,7 +7,7 @@ import Cardapio from "../components/Cardapio";
 import VideoTiamate from "../components/videoTiamate";
 import Banner from "../components/Banner.jsx";
 //Banner imports
-import bannerImg from "../assets/banner_01_1.png";
+import bannerImg from "../assets/Banner_01_1.png";
 import bannerImg2 from "../assets/banner_06_1.png";
 
 
