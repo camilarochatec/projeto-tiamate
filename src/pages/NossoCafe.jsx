@@ -16,7 +16,7 @@ const NossoCafe = () => {
                 texto={["Mais que sabor,", "sentimentos!"]}
                 redesSociais
                 // fraseColorida // Se a primeira frase deve ser colorida ou não
-                // corDaFrase={{ color: "text-mostarda" }} // Aqui conseguimos escolher a cor que vai estar na primeira frase
+                corDaFrase={{ color: "text-creme" }} // Aqui conseguimos escolher a cor que vai estar na primeira frase
             // textoAdireita
             />
       <Sessao
