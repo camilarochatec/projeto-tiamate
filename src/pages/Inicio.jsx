@@ -14,7 +14,7 @@ import Cta from "../components/Cta.jsx";
 const Inicio = () => {
     return (
         <>
-        <Cta
+        <Cta/>
         </>
     );
 }
