@@ -1,4 +1,5 @@
 
+import { useBuscarDepoimentos } from "../../hooks/depoimentosHooks";
 import cliente1 from "./assets/cliente1.png";
 import cliente2 from "./assets/cliente2.png";
 import cliente3 from "./assets/cliente3.png";
@@ -6,6 +7,8 @@ import depoimento_bg from "./assets/depoimento_bg.png";
 import estrela from "./assets/estrela.png";
 
 const Depoimentos = () => {
+  const { data: listaDepoimentos } = useBuscarDepoimentos();
+
   return (
     <section className="flex flex-col items-center gap-2 py-16 relative overflow-hidden xl:py-[130px]">
       <div className="flex flex-col items-center">
@@ -23,7 +26,7 @@ const Depoimentos = () => {
         />
 
         <div
-          className="overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-10 px-8 no-scrollbar mt-6 md:ml-80"
+          className="overflow-x-auto lg:overflow-hidden scroll-smooth snap-x snap-mandatory flex gap-10 px-8 no-scrollbar mt-6 md:ml-80"
         >
 
           <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
@@ -47,7 +50,6 @@ const Depoimentos = () => {
             </div>
           </div>
 
-
           <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
             <div className="flex gap-1">
               <img src={estrela} alt="estrela" />
@@ -66,7 +68,6 @@ const Depoimentos = () => {
               <p className="text-vinho font-semibold">Kalil Sousa</p>
             </div>
           </div>
-
 
           <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
             <div className="flex gap-1">
