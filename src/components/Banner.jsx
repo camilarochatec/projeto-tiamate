@@ -1,4 +1,6 @@
 import bannerImg from "../assets/banner_01 1.png";
+import bannerImgContato from "../assets/banner-contato.png";
+
 const redes = [
     { nome: "facebook", url: "https://facebook.com/tiamatecoffeefortalezacentro/", iconeimg: <box-icon type="logo" name="facebook" className="w-[24px] h-[24px] bg-canela rounded-full inline-block p-1 fill-marrom hover:bg-creme hover:fill-vinho duration-200"></box-icon> },
     { nome: "instagram", url: "https://instagram.com/tiamatefortaleza/", iconeimg: <box-icon type='logo' name='instagram' className="w-[24px] h-[24px] bg-canela rounded-full inline-block p-1 fill-marrom hover:bg-creme hover:fill-vinho duration-200"></box-icon> },

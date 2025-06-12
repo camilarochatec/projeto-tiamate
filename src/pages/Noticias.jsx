@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import bannerImg from "../assets/banner_01 1.png";
+import bannerImg from "../assets/banner-noticias.png";
 import QuemSomos from "../components/QuemSomos";
 import VideoTiamate from "../components/videoTiamate";
 import FormFranqueado from "../components/FormFranqueado";
@@ -9,6 +9,8 @@ import Diferenciais from "../components/Diferenciais";
 import Cta from "../components/Cta";
 import cta1 from "../assets/cta-1.png"
 import cta2 from "../assets/cta-2.png"
+import Depoimentos from "../components/Depoimentos/Depoimentos";
+import Posts from "../components/Noticias";
 
 
 const Noticias = () => {
@@ -18,6 +20,7 @@ const Noticias = () => {
                 imagem={bannerImg}
                 texto={["Abra sua Franquia", "Tiamate Coffee"]}
                 redesSociais
+                textoAdireita
             />
             <QuemSomos />
             <VideoTiamate />
@@ -36,6 +39,8 @@ const Noticias = () => {
                 textoDoBotao={"Mais Informações"}
                 imagem={cta2}
             />
+            <Depoimentos/>
+            <Posts />
             <FormFranqueado />
 
         </>
