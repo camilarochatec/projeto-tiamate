@@ -3,7 +3,7 @@ import { labels, lancamentos, expressos, tiamatinoCoffee, tiamatinoCream, bebida
 
 const Produtos = () => {
   const [bebidasAtuais, setBebidasAtuais] = useState(lancamentos);
-  const [activeLabel, setActiveLabel] = useState('Lançamentos'); 
+  const [activeLabel, setActiveLabel] = useState('Lançamentos');
 
   const mapaDeBebidas = {
     'Lançamentos': lancamentos,
@@ -15,12 +15,12 @@ const Produtos = () => {
     'Bebidas Geladas': bebidasGeladas
   };
 
-   const handleLabelClick = (item) => {
+  const handleLabelClick = (item) => {
     setBebidasAtuais(mapaDeBebidas[item]);
     // Atualiza o label ativo
-    setActiveLabel(item); 
+    setActiveLabel(item);
   };
-console.log("renderizou")
+  console.log("renderizou")
   return (
     <>
       <section className="h-screen flex flex-row items-start justify-baseline min-w-[430px]">
@@ -29,7 +29,7 @@ console.log("renderizou")
             {labels.map((item, index) => (
               <li key={index} className="hover:text-canela  hover:font-extrabold flex flex-row  ">
                 <hr className="h-2 text-xl w-2 mt-3 mr-2" />
-                <p  className={`flex-1 text-sm ${activeLabel === item ? 'text-canela font-bold' : ''}`} onClick={() => handleLabelClick(item)}>{item}</p>
+                <p className={`flex-1 text-sm ${activeLabel === item ? 'text-canela font-bold' : ''}`} onClick={() => handleLabelClick(item)}>{item}</p>
               </li>
             ))}
           </ul>
@@ -50,7 +50,7 @@ console.log("renderizou")
                     '--from-x': `${-200 + index + 50}px`, // Cada próximo item começa mais próximo do destino
                   }}
                 >
-                  <img src={item.imgUrl} alt={item.nome}/>
+                  <img src={item.imgUrl} alt={item.nome} />
                   <p className="text-center text-[10px] md:text-[14px] text-wrap ">{item.nome}</p>
                 </div>
               ))}

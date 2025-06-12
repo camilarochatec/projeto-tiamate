@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const Enderecos = () => {
     const [enderecos, setEnderecos] = useState();
-    const [loadind, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     async function buscarEnderecos() {
         const request = await AXIOS.get("/enderecos")
         if (request.data) {
@@ -27,7 +27,7 @@ const Enderecos = () => {
 
             <div className="grid lg:grid-cols-3 gap-24 py-20 leading-tight">
                 {
-                    loadind ? (
+                    loading ? (
                         <div>Carregando</div>
                     ) : enderecos.map((endereco) => (
                         <div className="max-w-sm text-center lg:text-left ">
