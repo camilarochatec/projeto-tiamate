@@ -10,7 +10,7 @@ const Instagram = () => {
     return ( 
         <>
             <section className="relative">
-                <div className="p-4 lg:px-[70px] xl:px-[135px] ">
+                <div className="p-4 md:pt-[60px] lg:px-[70px] xl:px-[135px] xl:pt-[170px]">
                     <div className="flex flex-col gap-[30px] lg:flex lg:flex-row lg:justify-between lg:align-center ">
                         <div className="flex flex-col items-center lg:flex lg:flex-col lg:items-start">
                             <h3 className="text-[15px] lg:text-[18px] text-marrom">Para você e seus amigos</h3>

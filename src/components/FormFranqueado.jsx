@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react"
+import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import formImage from "../assets/Form-Image.png"
 import formUserIcon from "../assets/form-icon-user.png"
@@ -8,18 +8,20 @@ import formPinIcon from "../assets/form-icon-pin.png"
 import formHouseIcon from "../assets/form-icon-house.png"
 import formCoffeIcon from "../assets/form-icon-Coffe.png"
 
+import { useCadastrarLead } from "../hooks/leadsHooks.js";
+
 const FormFranqueado = () => {
 
     const [estados, setEstados] = useState([]);
     const [cidades, setCidades] = useState([]);
     const { register, handleSubmit, setValue } = useForm();
 
+    const { mutate: cadastrarLeads } = useCadastrarLead();
+
     const onSubmit = (data) => {
-        console.log(data);
-        alert(`Obrigado ${data.nome} Seu Cadastro foi enviado!`);
+        cadastrarLeads(data)
+        alert(`Obrigado ${data.lead_nome} Seu Cadastro foi enviado!`);
     };
-
-
 
     async function buscarEstados() {
         const request = await fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome");
@@ -57,7 +59,7 @@ const FormFranqueado = () => {
     const handleTelefoneChange = (e) => {
         const raw = e.target.value;
         const masked = formatTelefone(raw);
-        setValue("telefone", masked);
+        setValue("lead_telefone", masked);
     };
 
 
@@ -80,21 +82,21 @@ const FormFranqueado = () => {
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
                             <img src={formUserIcon} alt="" />
                         </div>
-                        <input  {...register("nome", { required: true })} type="text" placeholder="Nome e Sobrenome" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none" />
+                        <input  {...register("lead_nome", { required: true })} type="text" placeholder="Nome e Sobrenome" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none" />
                     </div>
 
                     <div className="flex w-full bg-creme rounded-md h-[60px] gap-[10px] items-center pl-[10px] mb-[10px]">
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
                             <img src={formEmailIcon} alt="" />
                         </div>
-                        <input  {...register("e-mail", { required: true })} type="email" placeholder="email@exemplo.com" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none" />
+                        <input  {...register("lead_email", { required: true })} type="email" placeholder="email@exemplo.com" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none" />
                     </div>
 
                     <div className="flex w-full bg-creme rounded-md h-[60px] gap-[10px] items-center pl-[10px] mb-[10px]">
                         <div className="w-[32px] h-[32px] flex justify-center items-center rounded-full bg-canela">
                             <img src={formTelIcon} alt="" />
                         </div>
-                        <input {...register("telefone", { required: true })} onChange={handleTelefoneChange} type="text" placeholder="Telefone com DDD" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none" />
+                        <input {...register("lead_telefone", { required: true })} onChange={handleTelefoneChange} type="text" placeholder="Telefone com DDD" className="bg-transparent flex-1 h-[60px] placeholder:text-marrom focus:outline-none" />
                     </div>
 
                     <div className="md:flex gap-[10px]">
@@ -104,9 +106,9 @@ const FormFranqueado = () => {
                             </div>
                             <select
                                 className="flex-1 h-full outline-none"
-                                {...register("estado", { required: true })}
+                                {...register("lead_estado", { required: true })}
                                 onChange={(event) => {
-                                    setValue("estado", event.target.value);
+                                    setValue("lead_estado", event.target.value);
                                     buscarCidades(event.target.selectedOptions[0].attributes.estadoid.value);
                                 }}
                             >
@@ -131,8 +133,8 @@ const FormFranqueado = () => {
                             </div>
                             <select
                                 className="flex-1 h-full outline-none"
-                                {...register("cidade", { required: true })}
-                                onChange={(event) => setValue("cidade", event.target.value)}
+                                {...register("lead_cidade", { required: true })}
+                                onChange={(event) => setValue("lead_cidade", event.target.value)}
                             >
                                 <option disabled selected>Cidade</option>
                                 {
@@ -155,8 +157,8 @@ const FormFranqueado = () => {
                         </div>
                         <select
                             className="flex-1 h-full outline-none"
-                            {...register("midia", { required: true })}
-                            onChange={(event) => setValue("midia", event.target.value)}
+                            {...register("lead_midia", { required: true })}
+                            onChange={(event) => setValue("lead_midia", event.target.value)}
                         >
                             <option disabled selected>Como conheceu a Tiamate?</option>
                             <option value="instagram">Instagram</option>
@@ -176,7 +178,7 @@ const FormFranqueado = () => {
             </div>
 
             <div className="flex-1 ">
-                <img src={formImage} alt="Imagem ilustrativa" className="hidden md:block w-full h-full object-cover" />
+                <img src={formImage} alt="Imagem ilustrativa" className="block w-full h-full object-cover" />
             </div>
         </section>
     );
