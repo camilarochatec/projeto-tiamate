@@ -19,7 +19,7 @@ const Enderecos = () => {
         buscarEnderecos()
     }, [])
     return (
-        <div className="flex items-center justify-between flex-col px-8 mt-16">
+        <div className="flex items-center justify-between flex-col p-4">
             <div className="text-center">
                 <p className="text-marrom text-lg">Endereço</p>
                 <h3 className="text-bege text-4xl font-bold mt-2">Vem tomar um café</h3>

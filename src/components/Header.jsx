@@ -3,7 +3,8 @@
 import { useState } from "react"
 import { List, X } from "@phosphor-icons/react"
 import { Link, NavLink } from "react-router"
-import logo from "../images/Logo.png"
+import logo from "../assets/logo-tiamate.png"
+import logoMobile from "../assets/logo-tiamate-mobile.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,13 +15,13 @@ const Header = () => {
 
   return (
     <>
-      <div className="text-white shadow-md" style={{ backgroundColor: "#292625", minHeight: "110px" }}>
-        <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap" style={{ paddingTop: "30px" }}>
+      <div className="text-white bg-cafe">
+        <div className="flex items-center justify-between py-7 px-4 xl:px-33">
           {/* Seção esquerda com logo e navegação */}
-          <div className="flex items-center flex-1">
-            <img src={logo || "/placeholder.svg"} alt="Logo" className="h-12 w-auto" />
+          <div className="hidden lg:flex">
+            <img src={logo || "/placeholder.svg"} alt="Logo" />
             {/* Menu para desktop - visível apenas em telas médias e grandes */}
-            <nav className="hidden md:flex items-center ml-6 space-x-6">
+            <nav className="flex items-center gap-6 xl:gap-11 ml-13">
               <NavLink to={"/"}>Inicio</NavLink>
               <NavLink to={"/nosso-cafe"}>Nosso Café</NavLink>
               <NavLink to={"/noticias"}>Notícias</NavLink>
@@ -29,19 +30,20 @@ const Header = () => {
             </nav>
           </div>
           {/* Seção direita com botão de franquia */}
-          <div className="flex items-center justify-end">
+          <div className="flex justify-between w-full lg:w-auto">
             {/* Botão hamburger visível apenas em telas pequenas */}
-            <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <div className="flex items-center lg:hidden">
+              <button onClick={toggleMenu} className="text-mostarda mr-4 focus:outline-none">
                 {isMenuOpen ? <X size={28} weight="bold" /> : <List size={28} weight="bold" />}
               </button>
+              <img src={logoMobile} className="h-12 w-12" />
             </div>
 
             {/* Botão de franquia para desktop */}
-            <div className="hidden md:block">
+            <div className="block">
               <Link to="/franquia">
                 <button
-                  className="text-white px-4 py-2 rounded font-semibold transition hover:opacity-90"
+                  className="text-white h-13 w-45 lg:w-55 rounded-[5px] font-semibold transition hover:opacity-90"
                   style={{ backgroundColor: "#C7794A", color: "#3b2416" }}
                 >
                   Seja um Franqueado
@@ -50,46 +52,34 @@ const Header = () => {
             </div>
           </div>
         </div>
-
-        {/* Menu mobile - aparece quando o menu está aberto */}
-        {isMenuOpen && (
-          <div className="md:hidden w-full px-6 pb-4 bg-[#292625]">
-            <nav className="flex flex-col space-y-4">
-              <NavLink to={"/"} className="py-2 border-b border-gray-700" onClick={() => setIsMenuOpen(false)}>
-                Inicio
-              </NavLink>
-              <NavLink
-                to={"/nosso-cafe"}
-                className="py-2 border-b border-gray-700"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Nosso Café
-              </NavLink>
-              <NavLink to={"/noticias"} className="py-2 border-b border-gray-700" onClick={() => setIsMenuOpen(false)}>
-                Notícias
-              </NavLink>
-              <NavLink to={"/contato"} className="py-2 border-b border-gray-700" onClick={() => setIsMenuOpen(false)}>
-                Contato
-              </NavLink>
-              <NavLink to={"/cardapio"} className="py-2 border-b border-gray-700" onClick={() => setIsMenuOpen(false)}>
-                Cardápio
-              </NavLink>
-
-              {/* Botão de franquia para mobile */}
-              <div className="pt-2">
-                <Link to="/franquia" onClick={() => setIsMenuOpen(false)}>
-                  <button
-                    className="w-full text-white px-4 py-2 rounded font-semibold transition hover:opacity-90"
-                    style={{ backgroundColor: "#C7794A", color: "#3b2416" }}
-                  >
-                    Seja um Franqueado
-                  </button>
-                </Link>
-              </div>
-            </nav>
-          </div>
-        )}
       </div>
+
+      {/* Menu mobile - aparece quando o menu está aberto */}
+      {isMenuOpen && (
+        <div className="lg:hidden w-full px-6 py-4 bg-cafe text-white">
+          <nav className="flex flex-col space-y-4">
+            <NavLink to={"/"} className="h-10" onClick={() => setIsMenuOpen(false)}>
+              Inicio
+            </NavLink>
+            <NavLink
+              to={"/nosso-cafe"}
+              className="h-10"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Nosso Café
+            </NavLink>
+            <NavLink to={"/noticias"} className="h-10" onClick={() => setIsMenuOpen(false)}>
+              Notícias
+            </NavLink>
+            <NavLink to={"/contato"} className="h-10" onClick={() => setIsMenuOpen(false)}>
+              Contato
+            </NavLink>
+            <NavLink to={"/cardapio"} className="h-10" onClick={() => setIsMenuOpen(false)}>
+              Cardápio
+            </NavLink>
+          </nav>
+        </div>
+      )}
     </>
   )
 }

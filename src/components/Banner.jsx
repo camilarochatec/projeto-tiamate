@@ -7,12 +7,12 @@ const redes = [
 
 const Banner = ({ texto, imagem, redesSociais, fraseColorida, textoAdireita, corDaFrase }) => {
     return (
-            <section className="relative w-full h-[450px]">
+            <section className="relative">
             {/* Imagem de fundo */}
             <img
                 src={imagem}
                 alt="Banner"
-                className="absolute top-0 left-0 w-full h-full object-cover bg-center"
+                className="w-full block h-[450px] lg:h-auto object-cover bg-center"
             />
 
             {/* Texto*/}

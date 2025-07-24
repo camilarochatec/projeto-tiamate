@@ -178,7 +178,7 @@ const FormFranqueado = () => {
             </div>
 
             <div className="flex-1 ">
-                <img src={formImage} alt="Imagem ilustrativa" className="hidden md:block w-full h-full object-cover" />
+                <img src={formImage} alt="Imagem ilustrativa" className="block w-full h-full object-cover" />
             </div>
         </section>
     );

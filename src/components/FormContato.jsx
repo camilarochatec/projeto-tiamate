@@ -35,7 +35,7 @@ const FormContato = () => {
 
     return (
         <>
-            <section className="flex flex-col gap-[17px] my-[30px] lg:px-[50px] lg:my-[70px] xl:px-[140px] xl:my-[70px]">
+            <section className="flex flex-col gap-[17px] lg:px-[50px] lg:my-[70px] xl:px-[140px] xl:my-[70px]">
 
                 <div className="flex flex-col items-center lg:items-start xl:items-start">
 

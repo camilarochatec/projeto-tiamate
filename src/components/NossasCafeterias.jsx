@@ -52,7 +52,7 @@ const NossasCafeterias = () => {
   };
 
   return (
-    <section className="pt-[130px] p-4 lg:px-[70px] xl:px-[130px]">
+    <section className="p-4 lg:py-[40px] xl:py-[80px] lg:px-[70px] xl:px-[135px]">
       <div className="flex flex-col gap-[30px] items-center lg:flex lg:flex-row lg:justify-between lg:align-center pb-11">
         <h1 className="text-[30px] lg:text-[50px] font-bold text-bege">Nossas Cafeterias</h1>
         <BotaoVejaMais />
@@ -115,7 +115,7 @@ const NossasCafeterias = () => {
             <img src={imagem5} alt="" className="hidden xl:block hover:cursor-pointer transform transition-all duration-200 hover:scale-105" />
         </div>
         
-        <div className="flex justify-center gap-[15px] pt-[62px] pb-[149px]">
+        <div className="flex justify-center gap-[15px] p-4 xl:p-12">
           {imagensCafeterias.map((_, index) => (
             <div
               key={index}

@@ -10,7 +10,7 @@ const Depoimentos = () => {
   const { data: listaDepoimentos } = useBuscarDepoimentos();
 
   return (
-    <section className="flex flex-col items-center gap-2 py-16 relative overflow-hidden xl:py-[130px]">
+    <section className="flex flex-col items-center gap-2 py-8 relative overflow-hidden xl:py-[130px]">
       <div className="flex flex-col items-center">
         <p className="text-cafe text-[18px]">Depoimentos</p>
         <h3 className="text-bege text-4xl md:text-5xl font-bold text-center mt-3">
