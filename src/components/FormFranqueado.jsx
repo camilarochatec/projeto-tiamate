@@ -14,7 +14,13 @@ const FormFranqueado = () => {
 
     const [estados, setEstados] = useState([]);
     const [cidades, setCidades] = useState([]);
-    const { register, handleSubmit, setValue } = useForm();
+    const { register, handleSubmit, setValue, watch } = useForm({
+        defaultValues:{
+            lead_estado: "UF",
+            lead_cidade: "Cidade",
+            lead_midia: "Como conheceu a Tiamate?",
+        }
+    });
 
     const { mutate: cadastrarLeads } = useCadastrarLead();
 
@@ -111,8 +117,9 @@ const FormFranqueado = () => {
                                     setValue("lead_estado", event.target.value);
                                     buscarCidades(event.target.selectedOptions[0].attributes.estadoid.value);
                                 }}
+                                defaultValue={"UF"}
                             >
-                                <option disabled selected>UF</option>
+                                <option disabled>UF</option>
                                 {
                                     estados.map(estado => (
                                         <option
@@ -135,8 +142,9 @@ const FormFranqueado = () => {
                                 className="flex-1 h-full outline-none"
                                 {...register("lead_cidade", { required: true })}
                                 onChange={(event) => setValue("lead_cidade", event.target.value)}
+                                defaultValue={"Cidade"}
                             >
-                                <option disabled selected>Cidade</option>
+                                <option disabled>Cidade</option>
                                 {
                                     cidades.map(cidade => (
                                         <option
@@ -159,8 +167,9 @@ const FormFranqueado = () => {
                             className="flex-1 h-full outline-none"
                             {...register("lead_midia", { required: true })}
                             onChange={(event) => setValue("lead_midia", event.target.value)}
+                            defaultValue={"Como conheceu a Tiamate?"}
                         >
-                            <option disabled selected>Como conheceu a Tiamate?</option>
+                            <option disabled>Como conheceu a Tiamate?</option>
                             <option value="instagram">Instagram</option>
                             <option value="linkedin">Linkdin</option>
                             <option value="tv">TV</option>

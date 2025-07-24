@@ -5,8 +5,8 @@ const Sessao = ({ titulo, texto, imagem, layoutReverso }) => {
                 <div className="w-full md:w-[600px] lg:w-[470px] lg:h-[228px]:">
                     <h2 className="text-bege text-4xl text-center lg:text-start xl:text-5xl font-bold mb-8">{titulo}</h2>
                     {
-                        texto.map(paragrafo => (
-                            <p className="text-marrom lg:text-[14px] mb-4">{paragrafo}</p>
+                        texto.map((paragrafo, index) => (
+                            <p key={index} className="text-marrom lg:text-[14px] mb-4">{paragrafo}</p>
                         ))
                     }
                 </div>

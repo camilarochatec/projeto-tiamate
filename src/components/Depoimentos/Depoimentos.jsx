@@ -7,7 +7,15 @@ import depoimento_bg from "./assets/depoimento_bg.png";
 import estrela from "./assets/estrela.png";
 
 const Depoimentos = () => {
-  const { data: listaDepoimentos } = useBuscarDepoimentos();
+  const { data: listaDepoimentos, isFetched: carregou } = useBuscarDepoimentos([]);
+
+  function gerarEstrelas(qtn) {
+    let items = []
+    for (let i = 0; i < qtn; i++) {
+        items.push(<img src={estrela} alt="estrela" />)
+    }
+    return items;
+  }
 
   return (
     <section className="flex flex-col items-center gap-2 py-8 relative overflow-hidden xl:py-[130px]">
@@ -29,66 +37,24 @@ const Depoimentos = () => {
           className="overflow-x-auto lg:overflow-hidden scroll-smooth snap-x snap-mandatory flex gap-10 px-8 no-scrollbar mt-6 md:ml-80"
         >
 
-          <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
-            <div className="flex gap-1">
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-            </div>
+          {
+            carregou && listaDepoimentos.map(depoimento => (
+              <div key={depoimento.depoimento_id} className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
+                <div className="flex gap-1">
+                  { gerarEstrelas(depoimento.depoimento_nota) }
+                </div>
 
-            <div className="flex-1 min-h-[150px]">
-              <p className="text-marrom text-[14px]">
-                O café é realmente bom, e os salgados também (pedi um croissant de 4 queijos). Já havia pedido antes via iFood mas resolvi fazer uma visita enquanto andava pelo Centro, o café fica mesmo ao lado da Praça do Ferreira. Vale a pena dar uma visitada quando quiser se refrescar com um café gelado deles ou tomar um café da manhã por lá.
-              </p>
-            </div>
+                <div className="flex-1 min-h-[150px]">
+                  <p className="text-marrom text-[14px]">{depoimento.depoimento_descricao}</p>
+                </div>
 
-            <div className="flex items-center gap-3">
-              <img src={cliente1} alt="" />
-              <p className="text-vinho font-semibold">Kalil Sousa</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
-            <div className="flex gap-1">
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-            </div>
-            <div className="flex-1 min-h-[150px]">
-              <p className="text-marrom text-[14px]">
-                Excelente café no Centro da cidade. Vale a pena uma passada para quem estiver passando pela região.
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <img src={cliente2} alt="" />
-              <p className="text-vinho font-semibold">Kalil Sousa</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-between gap-3 py-12 px-8 rounded-[5px] bg-cinza shadow-md flex-none w-[400px] snap-center">
-            <div className="flex gap-1">
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-              <img src={estrela} alt="estrela" />
-            </div>
-
-            <div className="flex-1 min-h-[150px]">
-              <p className="text-marrom text-[14px]">
-                Ótimo lugar para descansar, café, cappuccino, mate, fica um refúgio de descanso em meio ao centro de Fortal City rs
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <img src={cliente3} alt="" />
-              <p className="text-vinho font-semibold">Kalil Sousa</p>
-            </div>
-          </div>
+                <div className="flex items-center gap-3">
+                  <img src={depoimento.depoimento_imagem} alt="" />
+                  <p className="text-vinho font-semibold">{depoimento.depoimento_nome}</p>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
