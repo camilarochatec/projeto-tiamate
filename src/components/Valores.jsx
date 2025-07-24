@@ -7,7 +7,7 @@ const Valores = () => {
         <>
 
             <section id="valores" className="md:flex justify-between py-15 px-4 xl:px-[135px] xl:pt-[160px] xl:pb-[140px] lg:gap-[60px] xl:gap-[160px] text-center lg:text-left">
-                <div>
+                <div className="md:flex-1">
                     <div className="lg:flex lg:items-center lg:gap-4">
                         <img src={missao} alt="missao" className="px-1 m-auto lg:m-0" />
                         <h2 className=" text-[24px] text-bege font-bold pt-4">Missão</h2>
