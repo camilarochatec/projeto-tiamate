@@ -38,7 +38,7 @@
     ];
 
     return (
-      <section className="bg-[#e7e1df] w-full flex flex-col items-center py-10 px-4 gap-8">
+      <section className="bg-[#e7e1df] w-full flex flex-col items-center py-15 px-4 gap-8 xl:px-[135px] xl:pt-[160px] xl:pb-[135px]">
         {/* Título */}
         <motion.div
           className="sectionTitle flex flex-col items-center gap-2"

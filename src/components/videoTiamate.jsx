@@ -29,9 +29,9 @@ const VideoTiamate = () => {
     };
 
     return (
-        <section className='flex flex-col items-center'>
-            <div className='flex flex-col w-[90%] lg:w-[1000px] my-[7%]'>
-                <h1 className='leading-[100%] text-[26px] md:text-[40px] lg:text-[50px] font-bold leading-tight text-[#A97744] mb-[3%]'>
+        <section className='flex flex-col pb-[60px] xl:pb-[125px]'>
+            <div className='flex flex-col px-4 xl:px-33'>
+                <h1 className='text-[36px] xl:text-[50px] text-bege mb-[80px] font-bold text-center xl:text-left leading-[40px] xl:leading-[55px]'>
                     Coisas boas acontecem àqueles<br />que gostam de café
                 </h1>
                 <div className='flex items-center justify-center relative'>
@@ -52,7 +52,7 @@ const VideoTiamate = () => {
                     />
                     <img
                         ref={imgRef}
-                        className='z-10 lg:w-[1000px] absolute'
+                        className='z-10 lg:w-full absolute'
                         src={ImgVideo}
                         alt="Imagem de fundo do vídeo"
                     />
