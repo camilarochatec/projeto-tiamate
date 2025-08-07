@@ -25,8 +25,11 @@ const FormFranqueado = () => {
     const { mutate: cadastrarLeads } = useCadastrarLead();
 
     const onSubmit = (data) => {
-        cadastrarLeads(data)
-        alert(`Obrigado ${data.lead_nome} Seu Cadastro foi enviado!`);
+        cadastrarLeads(data, {
+            onSuccess: () => {
+                alert(`Obrigado ${data.lead_nome} Seu Cadastro foi enviado!`);
+            }
+        })
     };
 
     async function buscarEstados() {
